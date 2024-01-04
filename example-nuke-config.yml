@@ -1,0 +1,19 @@
+regions: # By default, use all EU and US regions which are enabled by default in AWS accounts
+- global
+- eu-central-1
+- eu-west-1
+- eu-west-2
+- eu-west-3
+- eu-north-1
+- eu-central-1 
+- us-east-1
+- us-east-2
+- us-west-1
+- us-west-1
+
+account-blocklist:
+- "999999999999" # Something must be in here to allow the tool to run
+
+accounts:
+  999999999999: # AWS account number
+    filters:
