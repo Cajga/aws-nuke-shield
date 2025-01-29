@@ -2,7 +2,7 @@
 Wrap rebuy-de/aws-nuke (https://github.com/rebuy-de/aws-nuke) to allow the preservation of resources which meet certain conditions.
 
 The tool aws-nuke allows for deleting many resources from a target AWS account, and uses a config file format which supports filtering resources based on many resource properties. 
-However there are certain qualities (such as being a child of a certain CloudFormation stack) which are not currently supported. This interctive tool aims to fill this gap. 
+However there are certain qualities (such as being a child of a certain CloudFormation stack) which are not currently supported. This interactive tool aims to fill this gap. 
 
 ## The currently supported use cases
 * Resources which are children of a certain CloudFormation (CFN) Stack
@@ -15,7 +15,7 @@ However there are certain qualities (such as being a child of a certain CloudFor
 * The tool then runs aws-nuke using the generated config file
 * Certain resources are not filterable using the standard aws-nuke filter mechanism. For these, you can either:
   * add them manually to the file before running the tool; in this case the tool will make its modifications to the file as usual, preserving the preexisting content
-  * add them to the function `addAdditionalFilters` in main.go; in this case the script will add the lines programmatically. This function contains some preexisting lines for the currently known use case
+  * add them to the function `addAdditionalFilters` in main.go; in this case the script will add the lines programmatically. This function contains some preexisting lines for a known use case
 
 ## Caution!
 Given this tool is a wrapper for aws-nuke, the same disclaimers apply. Aws-nuke is a very destructive tool. We strongly advise you to not run this application on any AWS account, where you cannot afford to lose all resources.
